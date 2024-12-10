@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Sakura</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Content Grid -->
+        <div class="grid">
+            <!-- Left Side - Branding -->
+            <div class="left-container" id="leftContainer">
+                <!-- Background Container -->
+                <div class="background-container">
+                    <div class="background-image" id="image0">
+                        <img src="assets/images/11.jpg" alt="Background">
+                    </div>
+                    <div class="background-image" id="image1">
+                        <img src="assets/images/12.jpg" alt="Background">
+                    </div>
+                    <div class="background-image" id="image2">
+                        <img src="assets/images/13.jpg" alt="Background">
+                    </div>
+                    <div class="background-image" id="image3">
+                        <img src="assets/images/14.jpg" alt="Background">
+                    </div>
+                    <div class="background-image" id="image4">
+                        <img src="assets/images/15.jpg" alt="Background">
+                    </div>
+                </div>
+
+                <!-- Content -->
+                <div class="left-content">
+                    <div class="hero-content">
+                        <h1 class="hero-text">
+                            Know your health,<br /> monitor your life
+                        </h1>
+                        <div class="hero-features">
+                            <span class="feature-text">Real-time monitoring</span>
+                          
+                            <span class="feature-text">Personalized insights</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side - Login Form -->
+            <div class="right-container">
+                <div class="login-container">
+                    <div class="login-header">
+                        <h2>Login to BioSync</h2>
+                        <p>You can login or sign up here with multiple different client options</p>
+                    </div>
+
+                    <div class="login-options">
+                        <!-- Social Logins -->
+                        <button class="google-login">
+                            <img src="/icons/google.svg" alt="Google" />
+                            Login with Google
+                        </button>
+
+                        <div class="divider">
+                            <span>Or continue with</span>
+                        </div>
+
+                        <!-- Email Form -->
+                        <form class="login-form" id="loginForm">
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="Enter your email">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" id="password" name="password" placeholder="Enter your password">
+                            </div>
+
+                            <button type="submit" class="login-button">Login</button>
+                        </form>
+
+                        <div class="signup-prompt">
+                            <p>Don't have an account? <button class="signup-link">Sign up</button></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Theme Toggle -->
+        <button class="theme-toggle" id="themeToggle">
+            <img src="/icons/sun.svg" alt="Light mode" class="theme-icon" id="themeIcon">
+        </button>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html> 

@@ -1,217 +1,54 @@
 <html>
 <head>
-<link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-<style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Google Sans', system-ui, sans-serif;
-}
-
-body {
-  background-color: #f8f9fa;
-  padding: 2rem;
-}
-
-.nav {
-  display: flex;
-  gap: 1rem;
-  margin-bottom: 3rem;
-}
-
-.nav-btn {
-  padding: 0.75rem 2rem;
-  border-radius: 2rem;
-  border: none;
-  font-size: 1.1rem;
-  cursor: pointer;
-  font-weight: 500;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-}
-
-.nav-btn.active {
-  background-color: #0a0f15;
-  color: white;
-}
-
-.nav-btn.inactive {
-  background-color: white;
-  color: #4b5563;
-}
-
-.header {
-  margin-bottom: 3rem;
-}
-
-.header h1 {
-  color: #4867AA;
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-  font-weight: 500;
-}
-
-.header h2 {
-  color: #9096A3;
-  font-size: 2.5rem;
-  font-weight: normal;
-}
-
-.dashboard-container {
-  display: flex;
-  gap: 2rem;
-}
-
-.character-container {
-  flex: 1;
-}
-
-.character-container img {
-  width: 100%;
-  max-width: 300px;
-}
-
-.dashboard-grid {
-  flex: 2;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  max-width: 1200px;
-}
-
-.bmi-card {
-  background-color: #0a0f15;
-  color: white;
-  padding: 2rem;
-  border-radius: 1.5rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-.bmi-text {
-  margin-bottom: 2rem;
-  font-size: 1.25rem;
-  line-height: 1.5;
-  opacity: 0.9;
-}
-
-.bmi-value {
-  font-size: 4rem;
-  font-weight: 500;
-  color: #4ade80;
-}
-
-.fat-card {
-  background-color: white;
-  padding: 2rem;
-  border-radius: 1.5rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-.fat-label {
-  color: #6b7280;
-  margin-bottom: 1rem;
-  font-size: 1.25rem;
-}
-
-.fat-value {
-  font-size: 4rem;
-  font-weight: 500;
-  color: #111827;
-}
-
-.stats-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
-}
-
-.stat-card {
-  background-color: white;
-  padding: 1.75rem;
-  border-radius: 1.5rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-.stat-title {
-  color: #111827;
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-  font-weight: 500;
-}
-
-.stat-label {
-  color: #9ca3af;
-  font-size: 1rem;
-  margin-bottom: 0.75rem;
-}
-
-.stat-value {
-  font-size: 2rem;
-  font-weight: 500;
-  color: #111827;
-}
-
-@media (max-width: 768px) {
-  .dashboard-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .dashboard-container {
-    flex-direction: column;
-  }
-
-  .character-container img {
-    margin: 0 auto;
-  }
-}
-</style>
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<nav class="nav">
-  <button class="nav-btn active">Dashboard</button>
-  <button class="nav-btn inactive">Diet Plan</button>
-</nav>
+  <nav class="nav">
+    <button class="nav-btn active">Dashboard</button>
+    <button class="nav-btn inactive">Diet Plan</button>
+  </nav>
 
-<header class="header">
-  <h1>Overview</h1>
-  <h2>Patient Health</h2>
-</header>
+  <header class="header">
+    <h1>Overview</h1>
+    <h2>Patient Health</h2>
+  </header>
 
-<div class="dashboard-container">
-  <div class="character-container">
-    <img src="char.png" alt="Character">
+  <div class="dashboard-container">
+    <div class="character-container">
+      <img src="assets/images/char.png" alt="Character">
+    </div>
+    <main class="dashboard-grid">
+      <div class="bmi-card">
+        <p class="bmi-text">Your current BMI is very good, and you seem to be having a healthy body</p>
+        <div class="bmi-value">23.6</div>
+      </div>
+
+      <div class="fat-card">
+        <p class="fat-label">Total Fat %</p>
+        <div class="fat-value">16%</div>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <h3 class="stat-title">FFM</h3>
+          <p class="stat-label">your FFM is</p>
+          <div class="stat-value">55</div>
+        </div>
+
+        <div class="stat-card">
+          <h3 class="stat-title">BMR</h3>
+          <p class="stat-label">your BMR is</p>
+          <div class="stat-value">1260.5</div>
+        </div>
+
+        <div class="stat-card">
+          <h3 class="stat-title">TBW</h3>
+          <p class="stat-label">your TBW is</p>
+          <div class="stat-value">1260.5</div>
+        </div>
+      </div>
+    </main>
   </div>
-  <main class="dashboard-grid">
-    <div class="bmi-card">
-      <p class="bmi-text">Your current BMI is very good, and you seem to be having a healthy body</p>
-      <div class="bmi-value">23.6</div>
-    </div>
-
-    <div class="fat-card">
-      <p class="fat-label">Total Fat %</p>
-      <div class="fat-value">16%</div>
-    </div>
-
-    <div class="stats-grid">
-      <div class="stat-card">
-        <h3 class="stat-title">FFM</h3>
-        <p class="stat-label">your FFM is</p>
-        <div class="stat-value">55</div>
-      </div>
-
-      <div class="stat-card">
-        <h3 class="stat-title">BMR</h3>
-        <p class="stat-label">your BMR is</p>
-        <div class="stat-value">1260.5</div>
-      </div>
-
-      <div class="stat-card">
-        <h3 class="stat-title">TBW</h3>
-        <p class="stat-label">your TBW is</p>
-        <div class="stat-value">1260.5</div>
-      </div>
-    </div>
-  </main>
-</div>
 </body>
 </html>
